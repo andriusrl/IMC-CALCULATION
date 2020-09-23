@@ -32,6 +32,13 @@ function App() {
   
   const handleSubmit = (e)=>{
     e.preventDefault()
+
+    console.log(inputWeight)
+    console.log(inputHeight)
+
+    const result = (inputWeight / (inputHeight * inputHeight))
+
+    alert(`Indice de Massa Corpórea é de: ${result}`)
   }
 
   return (
@@ -41,9 +48,9 @@ function App() {
       </header>
       <Forms>
         <h4>Digite sua altura:</h4>
-        <input type="text" value={inputWeight} onChange={handleInputWeight} />
-        <h4>Digite seu peso:</h4>
         <input type="text" value={inputHeight} onChange={handleInputHeight} />
+        <h4>Digite seu peso:</h4>
+        <input type="text" value={inputWeight} onChange={handleInputWeight} />
       </Forms>
       <ButtonCustom type="submit" >Calcular</ButtonCustom>
     </Main>
